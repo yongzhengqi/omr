@@ -9,7 +9,7 @@ ECBT = Book("Essential Concepts of Bearing Technology")
 ACBT = Book("Advanced Concepts of Bearing Technology")
 
 
-class EquationSource:
+class Source:
     def __init__(self, book, page):
         self.book = book
         self.page = page
