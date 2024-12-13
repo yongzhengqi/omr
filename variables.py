@@ -41,8 +41,8 @@ f_o = describe_variable("f_o", newton * ((second ** Rational(4, 3)) / (millimete
                         Source(ECBT, 186), 0.7, Source(ECBT, 186))
 
 RPM = 1 / (60 * second)
-n_i = describe_variable("n_i", RPM, "Inner Race Speed", Source(ECBT, 181), 700_000, Design)
-n_o = describe_variable("n_o", RPM, "Outer Race Speed", Source(ECBT, 181), -400_000, Design)
+n_i = describe_variable("n_i", RPM, "Inner Race Speed", Source(ECBT, 181), 800_000, Design)
+n_o = describe_variable("n_o", RPM, "Outer Race Speed", Source(ECBT, 181), -500_000, Design)
 
 degree = pi / 180.0
 alpha = describe_variable("alpha", degree, "Contact Angle", Source(ECBT, 181), 15,
