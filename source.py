@@ -7,6 +7,7 @@ BBL = Book("Ball Bearing Lubrication: The Elastohydrodynamics of Elliptical Cont
 BDM = Book("Bearing Design in Machinery: Engineering Tribology and Lubrication")
 ECBT = Book("Essential Concepts of Bearing Technology")
 ACBT = Book("Advanced Concepts of Bearing Technology")
+Design = Book("Design Point")
 
 
 class Source:
