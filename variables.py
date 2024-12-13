@@ -42,7 +42,7 @@ f_o = describe_variable("f_o", newton * ((second ** Rational(4, 3)) / (millimete
 
 RPM = 1 / (60 * second)
 n_i = describe_variable("n_i", RPM, "Inner Race Speed", Source(ECBT, 181), 700_000, Design)
-n_o = describe_variable("n_o", RPM, "Outer Race Speed", Source(ECBT, 181), -300_000, Design)
+n_o = describe_variable("n_o", RPM, "Outer Race Speed", Source(ECBT, 181), -400_000, Design)
 
 degree = pi / 180.0
 alpha = describe_variable("alpha", degree, "Contact Angle", Source(ECBT, 181), 15,
@@ -68,9 +68,6 @@ X_s = describe_variable("X_s", None, "Radial Load Conversion Coefficient", Sourc
 
 Y_s = describe_variable("Y_s", None, "Axial Load Conversion Coefficient", Source(ECBT, 176),
                         0.47, Source(ECBT, 178))
-
-# g = describe_variable("g", millimeter/(second ** 2), "Gravitational Acceleration Constant",
-#                       Source(ACBT, 63), 9806.65, "https://en.wikipedia.org/wiki/Gravitational_acceleration")
 
 rho = describe_variable("rho", kilogram/(millimeter ** 3), "Density of Si3N4", Source(ACBT, 64),
                         3.17e-6, "https://en.wikipedia.org/wiki/Silicon_nitride")

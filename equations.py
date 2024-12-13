@@ -1,5 +1,5 @@
 from sympy import cos, cot, Max
-from sympy.physics.units import watt
+from sympy.physics.units import watt, radian
 
 from variables import *
 
@@ -23,6 +23,9 @@ d_m = describe_equation("d_m", "Pitch Diameter", Source(BBL, 47), (d_i + d_o) / 
 
 gamma = describe_equation("gamma", "A Geometric Factor", Source(ECBT, 181),
                           d_b * cos(alpha) / d_m, None)
+
+omega_i = describe_equation("omega_i", "Rotational Speed of Inner Race", Source(ECBT, 192),
+                            n_i * 2 * pi, radian/second)
 
 n_m = describe_equation("n_m", "Cage Speed", Source(ECBT, 183),
                         0.5 * (n_i * (1 - gamma) + n_o * (1 + gamma)), RPM)
@@ -52,4 +55,4 @@ M_tot = describe_equation("M_tot", "Total Friction Torque", Source(ECBT, 186),
                           M_load + M_v, newton * millimeter)
 
 H_tot = describe_equation("H_tot", "Total Friction Heat Generation Rate", Source(ACBT, 194),
-                          M_tot * n_i / (9.551 * 1e3), watt)
+                          M_tot * omega_i, watt)
